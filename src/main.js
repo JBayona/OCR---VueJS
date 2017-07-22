@@ -1,7 +1,7 @@
-import Vue from 'vue'
+import Vue from 'vue';
 
 new Vue({
-  el: 'body',
+  el: '#app',
   data: {
     message: "Hello Vue"
   }
