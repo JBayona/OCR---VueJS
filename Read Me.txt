@@ -1,0 +1,1 @@
+-command <webpack>: Build the app
