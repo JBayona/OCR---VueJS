@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "description": "OCR VueJS",
   "dependencies": {
-    "vue": "^2.4.2"
+    "vue": "^2.4.2",
+    "vue-picture-input": "^1.12.1",
+    "vue-progress-bar": "^1.0.1",
+    "vue-progressbar": "^0.7.2"
   },
   "devDependencies": {
     "babel-core": "^6.1.2",
@@ -14,7 +17,9 @@
     "babel-runtime": "^5.8.0",
     "css-loader": "^0.23.0",
     "loglevel": "^1.4.1",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.13.0",
+    "tesseract.js": "^1.0.10",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^7.3.0",

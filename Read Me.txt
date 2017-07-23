@@ -1,1 +1,2 @@
 -command <webpack>: Build the app
+npm run dev : Run project
