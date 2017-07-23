@@ -18,10 +18,15 @@
 			      :removable="true">
 		    	</picture-input>
 				</div>
-				<div class="col-6 flex-center">
-		    	<img v-if="showGIF" class="loading-gif" src="/images/loading.gif" alt="Loading">
-					<textarea class="text-area" id="readText" rows="21" cols="50">
-			  	</textarea>
+				<div class="col-6">
+					<div class="row flex-center">
+						<img v-if="showGIF" class="loading-gif" src="/images/loading.gif" alt="Loading">
+						<textarea class="text-area" id="readText" rows="21" cols="50">
+				  	</textarea>
+					</div>
+			  	<div v-if="showSaveBtn" class="row btn-save">
+			  		<button v-on:click ="saveFile" class="btn">Save</button>
+			  	</div>
 				</div>
 			</div>
 	</div>
@@ -30,13 +35,19 @@
 <script>
 	import Tesseract from 'tesseract.js';
 	import PictureInput from 'vue-picture-input';
+	import FileSaver from 'file-saver';
 	//import CssCircle from 'v-circle/components/css-circle.vue';
 
 
 	export default {
 	  data () {
 	    return {
-	      showGIF: false
+	      showGIF: false,
+	      showSaveBtn: false,
+	      nameFile: '',
+	      fileContent: '',
+	      lines: '',
+	      formatedText: []
 	    }
 	  },
 	  components: {
@@ -49,21 +60,36 @@
 	    },
 	    onChange () {
 	    	this.showGIF = true;
+	    	this.showSaveBtn= false;
 	      if (this.$refs.pictureInput.image) {
+	      	let fileName = this.$refs.pictureInput.fileName;
+	      	this.nameFile = fileName.slice(0,fileName.indexOf('.'));
 	      	let image = this.$refs.pictureInput.image;
-	      	let progress;
 	      	Tesseract.recognize(image)
 					.progress(message => {
 						this.progressVal = message.progress;
 					})
 			    .catch(err => console.error(err))
 			    .then(result => {
-			    		document.getElementById('readText').innerHTML = result.text;
-			    		this.showGIF = false;
+			    	this.lines = result.lines;
+			    	this.fileContent = result.text
+		    		document.getElementById('readText').innerHTML = this.fileContent;
+		    		this.showGIF = false;
+		    		this.showSaveBtn= true;
 			    });
 	      } else {
 	        console.log('FileReader API not supported: use the <form>, Luke!')
 	      }
+			},
+			formatText(){
+				this.lines.forEach(item =>{
+					this.formatedText.push(item.text);
+				});
+			},
+			saveFile(){
+				this.formatText();
+				 let blob = new Blob([this.formatedText.join("\r\n\r\n")], {type: "text/plain;charset=utf-8"});
+				 FileSaver.saveAs(blob, this.nameFile+".txt");
 			}
 	  }
 	}
@@ -203,5 +229,10 @@ textarea:focus {
 .copyright {
   font-size: smaller;
   text-align: center
+}
+
+.btn-save{
+  margin: 0.8em;
+  text-align: center;
 }
 </style>
