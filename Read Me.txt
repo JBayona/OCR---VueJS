@@ -1,4 +1,4 @@
-
+/*Basic Commands*/
 -command <webpack>: Build the app
 webpack: Compile the app.
 npm run dev : Run project
