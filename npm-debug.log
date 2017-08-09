@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\NodeJSInstall\\node.exe',
+1 verbose cli   'C:\\Program Files\\NodeJSInstall\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'dev' ]
+2 info using npm@4.1.2
+3 info using node@v7.6.0
+4 verbose run-script [ 'predev', 'dev', 'postdev' ]
+5 info lifecycle OCR@0.0.1~predev: OCR@0.0.1
+6 silly lifecycle OCR@0.0.1~predev: no script for predev, continuing
+7 info lifecycle OCR@0.0.1~dev: OCR@0.0.1
+8 verbose lifecycle OCR@0.0.1~dev: unsafe-perm in lifecycle true
+9 verbose lifecycle OCR@0.0.1~dev: PATH: C:\Program Files\NodeJSInstall\node_modules\npm\bin\node-gyp-bin;C:\Users\jorda_000\Documents\Projects\ocrVueJS\node_modules\.bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Hewlett-Packard\SimplePass\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Java\jdk1.8.0_11\bin;C:\Program Files\Java\jdk1.8.0_45\bin;C:\Tomcat\8.0.23\Files\bin;C:\Program Files\Java\jdk1.8.0_45\jre\bin;C:\Program Files (x86)\Deployd\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Heroku\bin;C:\Program Files (x86)\git\cmd;C:\cygwin64\bin;C:\Program Files\MongoDB\Server\3.2\bin;C:\Program Files (x86)\Gradle\gradle-2.13/bin;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 & MySQL Utilities 1.5\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 & MySQL Utilities 1.5\Doctrine extensions for PHP\;C:\Users\jorda_000\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Program Files\NodeJSInstall\;C:\Program Files (x86)\Skype\Phone\;C:\Users\jorda_000\AppData\Local\Programs\Python\Python35-32\Scripts\;C:\Users\jorda_000\AppData\Local\Programs\Python\Python35-32\;C:\Users\jorda_000\AppData\Local\Microsoft\WindowsApps;C:\Users\jorda_000\AppData\Local\atom\bin;C:\Users\jorda_000\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\jorda_000\AppData\Local\Yarn\.bin;C:\Users\jorda_000\AppData\Roaming\npm;
+10 verbose lifecycle OCR@0.0.1~dev: CWD: C:\Users\jorda_000\Documents\Projects\ocrVueJS
+11 silly lifecycle OCR@0.0.1~dev: Args: [ '/d /s /c', 'webpack-dev-server --inline --hot' ]
+12 verbose stack Error: kill ENOSYS
+12 verbose stack     at exports._errnoException (util.js:1028:11)
+12 verbose stack     at process.kill (internal/process.js:173:13)
+12 verbose stack     at process.listener (C:\Program Files\NodeJSInstall\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:95:15)
+12 verbose stack     at emitNone (events.js:86:13)
+12 verbose stack     at process.emit (events.js:186:7)
+12 verbose stack     at processEmit (C:\Program Files\NodeJSInstall\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:155:32)
+12 verbose stack     at Signal.wrap.onsignal (internal/process.js:200:44)
+13 verbose cwd C:\Users\jorda_000\Documents\Projects\ocrVueJS
+14 error Windows_NT 10.0.15063
+15 error argv "C:\\Program Files\\NodeJSInstall\\node.exe" "C:\\Program Files\\NodeJSInstall\\node_modules\\npm\\bin\\npm-cli.js" "run" "dev"
+16 error node v7.6.0
+17 error npm  v4.1.2
+18 error code ENOSYS
+19 error errno ENOSYS
+20 error syscall kill
+21 error kill ENOSYS
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]
