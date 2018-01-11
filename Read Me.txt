@@ -1,5 +1,5 @@
 // Vue.js - OCR ReaderJS
-/* Basic Commands run app */
+/*Basic Commands run app*/
 -command <webpack>: Build the app
 webpack: Compile the app.
 npm run dev : Run project
